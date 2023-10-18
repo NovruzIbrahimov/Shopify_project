@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title1": "Alien ware Monitor T 46",
+      "price": "850.00",
+      "image": "src/images/product-1-alien.avif",
+      "options": ["32 Inches", "28 Inches"]
+    },
+    {
+      "id": 2,
+      "title1": "Colossus Ergonomic...",
+      "price": "356.00",
+      "image": "src/images/product-2-clossus.avif",
+      "options": ["White", "Green"]
+    },
+    {
+      "id": 3,
+      "title1": "Electrobot Xtreme...",
+      "price": "468.00",
+      "image": "src/images/product-3-electro.avif",
+      "options": ["128GB", "256Gb"]
+    },
+    {
+      "id": 4,
+      "title1": "Nintendo Switch Lite ...",
+      "price": "543.00",
+      "image": "src/images/product-4-nintendo.avif",
+      "options": ["Blue", "White"]
+    }
+  ],
+  "products1": [
+    {
+      "id": 5,
+      "title1": "Kepler Brooks Gaming...",
+      "price": "800.00",
+      "image": "src/images/product-kepler.webp",
+      "options": ["52D x 66W x131H", "50D x 65W x 130H"]
+    },
+    {
+      "id": 6,
+      "title1": "Radeon RX 750 XT...",
+      "price": "940.00",
+      "image": "src/images/radeon-740.webp",
+      "options": ["Black", "White"]
+    },
+    {
+      "id": 10,
+      "title1": "Radeon RX 120 GTS...",
+      "price": "560.00",
+      "image": "src/images/radeon-120.webp",
+      "options": ["3 Gb", "8 GB"]
+    },
+    {
+      "id": 11,
+      "title1": "Rubber Keycaps...",
+      "price": "580.00",
+      "image": "src/images/rubber-keycaps.webp",
+      "options": ["Green", "Red"]
+    }
+  ],
+  "products2": [
+    {
+      "id": 7,
+      "title1": "Refurbished Xbox Seri...",
+      "price": "430.00",
+      "image": "src/images/product-7-refurbish.avif",
+      "options": ["Black", "White"]
+    },
+    {
+      "id": 8,
+      "title1": "HTC Vive Tracker (3.0)..",
+      "price": "560.00",
+      "image": "src/images/product-8-htc.avif",
+      "options": ["Black", "White"]
+    },
+    {
+      "id": 9,
+      "title1": "VR Headset with...",
+      "price": "860.00",
+      "image": "src/images/product-9-vr.avif",
+      "options": ["18 x 11.5 x 11", "20 x 12.5 x 13"]
+    }
+  ]
+}

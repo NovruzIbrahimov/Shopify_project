@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Cabin:wght@600&family=DM+Sans:opsz,wght@9..40,100&family=Inter&family=Lato:wght@300;400&family=Montserrat:wght@500&family=Outfit:wght@300;400&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/aboutstyle.css" />
+  </head>
+  <body>
+    
+    <div class="burger-menu" id="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <header class="header-1">
+        <!-- Word Dropdowns -->
+        <div class="dropdown-section">
+          <div class="dropdown">
+            <a class="main_a" href="/index.html">Gaming Accessories</a>
+            <div class="dropdown-content1">
+              <div class="box1">
+                <p>Pro Gaming</p>
+                <li><a href="">Game Console</a></li>
+                <li><a href="">Game Remote</a></li>
+                <li><a href="">Gaming Cards</a></li>
+                <li><a href="">Gaming Chairs</a></li>
+                <li><a href="">Gaming Moniter</a></li>
+                <li><a href="">Gaming PCs</a></li>
+              </div>
+              <div class="box1">
+                <p>New Accessories</p>
+                <li><a href="">Alien ware Monitor</a></li>
+                <li><a href="">G-Series Curved VA Monitor</a></li>
+                <li><a href="">Cloud Alpha Gaming Headset</a></li>
+                <li><a href="">DualSense Wireless Controllers</a></li>
+                <li><a href="">Raptor Gameing Z95</a></li>
+                <li><a href="">KD DMTR Gaming Desktop PC</a></li>
+              </div>
+              <div class="box1">
+                <p>Master Game</p>
+                <li><a href="">Gaming Office Chair</a></li>
+                <li><a href="">Gaming Chair for Gamers with Lumbar</a></li>
+                <li><a href="">HTC Vive Tracker (3.0) - PC</a></li>
+                <li><a href="">VR Headset with Headphones</a></li>
+                <li><a href="">RX 590 GTS Graphics Card</a></li>
+                <li><a href="">RX 680 GTS Graphics Card</a></li>
+              </div>
+              <div class="box4">
+                <img src="./src/images/navbar.webp" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a class="main_a" href=""> Pages</a>
+            <div class="dropdown-content2">
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="">Contact with us</a></li>
+              <li><a href="">FAQ's</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Shipping & Delivery</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a class="main_a" href=""> Blog</a>
+            <div class="dropdown-content3">
+              <li><a href="">Blog Page</a></li>
+              <li><a href="">Article Page</a></li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-section">
+          <a href="/index.html"><img src="./src/images/logo.png" alt="Logo" /></a>
+        </div>
+
+        <!-- Icons and Dropdowns -->
+        <div class="icon-section">
+          <!-- User Icon -->
+          <div class="dropdown">
+            <i class="fa-solid fa-user"></i>
+            <div class="dropdown-content4">
+              <li><a href="">Log in</a></li>
+              <li><a href="">Create Account</a></li>
+              <li><a href="">Wishlist(0)</a></li>
+              <li><a href="">Compare(0)</a></li>
+            </div>
+          </div>
+
+          <!-- Globe Icon -->
+          <div class="dropdown">
+            <i class="fa-solid fa-globe"></i>
+            <div class="dropdown-content5">
+              <li><a href=""> English </a></li>
+              <li><a href=""> العربية </a></li>
+              <li><a href=""> Deutsch </a></li>
+              <li><a href=""> Español </a></li>
+            </div>
+          </div>
+
+          <select class="language-select">
+            <option value="en">USD</option>
+          </select>
+
+          <div class="cart-shopping-icon  position-relative">
+            <span>My Cart:</span>
+            <a href="" class="btn" id="cartIcon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="itemCount" class="cart-count">0</span>
+            </a>
+              
+            <div id="cartCard" class="cart-card position-absolute ">
+
+              <button id="closeCart"
+               style="position: absolute; top: 18px;
+               left: -60px; 
+               color:#ffffff;
+               background-color:#0098ff; 
+               width: 47px;
+               height: 47px;
+               border: 1px solid #0098ff;">&times;</button>
+
+                <div class="container">
+                  <div class="row top-row">
+                      <div class="col text-left">
+                       <p>My Cart</p>
+                      </div>
+                      <div class="col text-right">
+                       <p id="miniItem">0 Items</p>
+                      </div>
+                  </div>
+                  <div class="row mt-4 mb-4 middle-row">
+                      <div id="cartContent" class="col">
+
+                        <div class="row cart-item">
+                        
+                          <div class="col-3 mini-cart-image">
+                              <img src="./src/images/1_5d4b2eec-0d47-4696-bee8-9a3d1976a2e9_600x600.png" alt="" class="img-fluid">
+                          </div>
+                      
+                          <div class="col-9">
+                              <p class="product-title">Product Name</p>
+                              
+                              <div class="d-flex align-items-center mb-4 btn-all1">
+                                <button id="decrement" class="btn mr-2">-</button>
+                                <span class="quantity1" id="quantity2">Qty: 1</span>
+                                <button id="increment" class="btn ml-2">+</button>
+                              </div>
+                            
+                              <div class="d-flex justify-content-between mini-cart-footer">
+                                  <span class="product-price">$0.00</span>
+                                  <i class="fa-solid fa-trash-alt delete-icon"></i>
+                              </div>
+                          </div>
+  
+                        </div>
+  
+                      </div>
+                  </div>
+                  <div class="row bottom-row">
+                      <div class="col text-left">
+                        <p>Subtotal</p>
+                      </div>
+                      <div class="col text-right">
+                        <p>0.00 USD</p>
+                      </div>
+                  </div>
+                  <div class="row mt-2">
+                      <div class="col text-center">
+                          <a href="">View Cart <i class="fa-solid fa-arrow-right"></i></a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            
+           </div>
+           
+        </div>
+      </header>
+
+      <!-- Header 2 -->
+      <header class="header-2">
+        <p>New Accessories -30 % Off. More</p>
+        <input type="text" placeholder="Search Product..." />
+        <p>New Collections</p>
+      </header>
+    </nav>
+
+    <!-- First Section -->
+    <div class="sect1">
+      <section class="container section1">
+        <h1>About Us</h1>
+        <p>
+          The gaming industry continues to push the boundaries of innovation,
+          offering virtual reality <br />
+          experiences that blur the lines between the real and the digital.
+        </p>
+      </section>
+    </div>
+
+    <!-- Second Section -->
+    <div class="sect2">
+      <section class="container mt-5 section2">
+        <h2>Where Fantasy and Reality Collide</h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 left2-text">
+            <p>
+              Prepare to embark on thrilling gaming journeys that transport you
+              to uncharted territories, distant galaxies, and epic
+              battlegrounds. Our gaming paradise offers an unparalleled blend of
+              excitement, competition, and camaraderie, inviting players of all
+              levels to unleash their inner warriors and embrace the
+              exhilaration of play. Immerse yourself in cutting-edge graphics,
+              captivating storylines, and dynamic gameplay that push the
+              boundaries of what's possible. From action-packed shooters that
+              demand lightning-fast reflexes to immersive role-playing games
+              that invite you to shape your destiny, our collection of games
+              spans genres and offers endless possibilities..
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6 right2-text">
+            <p>
+              Whether you're a seasoned pro or a novice explorer, our gaming
+              environment provides a space for both competition and
+              collaboration. Connect with fellow gamers from around the world,
+              form alliances, and embark on quests together, or go head-to-head
+              in intense multiplayer battles that test your skills and
+              strategies. Experience gaming like never before with our
+              state-of-the-art technology and high-performance equipment.
+              Immerse yourself in vivid worlds through cutting-edge virtual
+              reality experiences or feel the precision and responsiveness of
+              our top-of-the-line gaming accessories.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Third Section -->
+    <div class="sect3">
+      <section class="container mt-5 text-center section3">
+        <h2>Immersive Gaming Adventures: Unleash the Power of Play</h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mt-5 left3-text">
+            <h1>Explore the Ultimate Gaming Experience</h1>
+            <p>
+              We're dedicated to providing an unrivaled gaming experience that
+              leaves you fully immersed and connected to the digital realms you
+              love. But gaming is more than just entertainment; it's a
+              community. Join us in fostering a vibrant and inclusive gaming
+              culture that celebrates diversity and empowers players to connect,
+              compete, and grow. Share your achievements, engage in lively
+              discussions, and forge lasting friendships with like-minded gamers
+              who share your passion and enthusiasm.
+            </p>
+            <p>
+              Whether you seek the adrenaline rush of competitive gaming, the
+              exploration of vast virtual landscapes, or the joy of unraveling
+              intricate puzzles, our gaming offerings cater to your every
+              desire. Unlock your potential, unleash your creativity, and embark
+              on unforgettable gaming adventures that will keep you captivated
+              for hours on end.
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6 mt-5 right3-text">
+            <img src="src/images/abt-1.webp" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Fourth Section -->
+    <div class="sect4">
+      <section class="container mt-5 text-center section4">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mt-5 left4-text">
+            <img src="src/images/abt-2.webp" alt="" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 col-md-6 mt-5 right4-text">
+            <h1>Dive into the World of Gaming Excellence</h1>
+            <p>
+              Dive into the visually stunning landscapes and intricately
+              designed worlds that push the boundaries of realism. From
+              meticulously crafted characters to breathtaking environments, our
+              games transport you to immersive digital realms that blur the line
+              between fiction and reality. Our gaming platform caters to players
+              of all skill levels, offering a range of difficulty settings and
+              customizable options. Whether you're a seasoned gamer seeking a
+              new challenge or a casual player looking to unwind and have fun,
+              there's a game waiting for you to embark on your next adventure.
+            </p>
+            <p>
+              Join a vibrant community of fellow gamers who share your passion
+              and enthusiasm. Connect, compete, and collaborate as you forge new
+              friendships, exchange strategies, and celebrate victories
+              together. Our gaming platform is not just about the games; it's
+              about the connections and camaraderie that thrive within this
+              dynamic world.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Fifth (last) Section -->
+    <div class="sect5">
+      <section class="container mt-5 text-center section5">
+        <h1>About our services</h1>
+        <p>
+          Our mission is to empower individuals with knowledge and facilitate
+          meaningful connections through our platform.We understand the
+          importance <br />
+          of reliable and up-to-date information in today's fast-paced world.
+        </p>
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-4 cart1">
+            <div class="card">
+              <div class="card-body">
+                <span>Fast delivery</span>
+                <span><i class="fa-solid fa-truck-ramp-box"></i></span>
+                <p class="mt-3">
+                  The specific delivery time will vary depending on the shipping
+                  address and the selected delivery option. Customers can track
+                  their order online to see the estimated delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 cart1">
+            <div class="card">
+              <div class="card-body">
+                <span>Many offers</span>
+                <span><i class="fa-solid fa-gear"></i></span>
+                <p class="mt-3">
+                  CMS also offers a variety of training and technical assistance
+                  to help providers and state agencies meet their
+                  responsibilities under Medicare, Medicaid, and SCHIP.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 cart1">
+            <div class="card">
+              <div class="card-body">
+                <span>24/7 support</span>
+                <span><i class="fa-solid fa-phone"></i></span>
+                <p class="mt-3">
+                  CMS Service support is available 24 hours a day, 7 days a
+                  week. You can reach them by phone, email, or chat. Here are
+                  the contact information for CMS Service support:
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-all">
+        <!-- First Part -->
+        <div class="footer-section1">
+          <img src="./src/images/logo.png" alt="Description" />
+          <h1>
+            Reach out & let your <strong>mind</strong> <br />
+            <strong>explore</strong>
+          </h1>
+          <h2>
+            I also love the challenge of trying to beat a difficult game or
+            <br />
+            master a new skill.
+          </h2>
+          <p>© 2023, Gaming WorkDo, Powered by Shopify</p>
+        </div>
+
+        <!-- Second Part -->
+        <div class="footer-section2">
+          <h1 class="main">NAVIGATION:</h1>
+          <li><a href="">Search</a></li>
+          <li><a href="">All Collections</a></li>
+          <li><a href="">All Products</a></li>
+          <li><a href="">Article Page</a></li>
+          <li><a href="">Blog Page</a></li>
+        </div>
+
+        <!-- Third Part -->
+        <div class="footer-section3">
+          <h1 class="main">ABOUT US:</h1>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact with us</a></li>
+          <li><a href="">FAQ's</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Shipping & Delivery</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+        </div>
+
+        <!-- Fourth Part -->
+        <div class="footer-section4 icons">
+          <h1 class="main">SHARE:</h1>
+          <i class="fa-brands fa-square-youtube"></i>
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./src/js/index.js"></script>
+</html>
