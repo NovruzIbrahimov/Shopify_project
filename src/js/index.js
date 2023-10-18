@@ -334,7 +334,7 @@ fetch("db.json")
           `;
       });
 
-      document.querySelector(".row .sect_8 ").innerHTML = html;
+      document.querySelector(".main-row-3").innerHTML = html;
   });
 
 document.body.addEventListener('click', function(event) {

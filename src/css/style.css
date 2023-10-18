@@ -1405,7 +1405,74 @@ img.img-fluid {
   border: 1px solid #007aff;
 }
 
-.sect_8 {
+.main-row-3 {
+  width: 100%;
+  display: flex;
+}
+.main-row-3 .card {
+  width: 278px;
+  height: 437px;
+  margin: 0 0px 0 0;
+}
+.main-row-3 .card {
+  background-color: rgba(1, 91, 255, 0.18);
+  padding: 10px 10px 0px 10px;
+  border: 1px solid #007aff;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+}
+.main-row-3 .card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-row-3 .card-image-wrapper{
+  width: 250px;
+  height: 200px;
+  margin: 60px 0 0 0;
+}
+.main-row-3 .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.select_8 {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid #000000;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: rgba(1, 91, 255, 0.18);
+  color: #838383;
+  outline: none;
+}
+.card .card-body {
+  margin-top: 6px;
+}
+.card .card-body span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-row-3 .card-body button {
+  font-size: 14px;
+  padding: 4px 20px;
+  color: #ffffff;
+  border: 1px solid #007aff;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: linear-gradient(72deg, #0098ff 0%, #7b35c8 100%);
+}
+.main-row-3 .card-body button:hover {
+  color: #838383;
+  background-color: #ffffff;
+  border: 1px solid #838383;
+}
+
+/* .sect_8 {
   width: 100%;
   display: flex;
 }
@@ -1470,7 +1537,7 @@ img.img-fluid {
   color: #838383;
   background-color: #ffffff;
   border: 1px solid #838383;
-}
+} */
 /* Section 8 sonu */
 
 /* Orta hissenin sonu */
