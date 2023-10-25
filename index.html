@@ -21,17 +21,14 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Cabin:wght@600&family=DM+Sans:opsz,wght@9..40,100&family=Inter&family=Lato:wght@300;400&family=Montserrat:wght@500&family=Outfit:wght@300;400&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;700&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
 
-    <div class="burger-menu" id="burger-menu">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-
-    
     <nav class="main-nav" id="main-nav">
       <header class="header-1">
         <!-- Word Dropdowns -->
@@ -43,7 +40,7 @@
                 <p>Pro Gaming</p>
                 <li><a href="">Game Console</a></li>
                 <li><a href="">Game Remote</a></li>
-                <li><a href="">Gaming Cards</a></li>
+                <li><a href="/shop.html">Gaming Cards</a></li>
                 <li><a href="">Gaming Chairs</a></li>
                 <li><a href="">Gaming Moniter</a></li>
                 <li><a href="">Gaming PCs</a></li>
@@ -95,7 +92,9 @@
 
         <!-- Logo -->
         <div class="logo-section">
-          <a href="/index.html"><img src="./src/images/logo.png" alt="Logo" /></a>
+          <a href="/index.html"
+            ><img src="./src/images/logo.png" alt="Logo"
+          /></a>
         </div>
 
         <!-- Icons and Dropdowns -->
@@ -126,104 +125,104 @@
             <option value="en">USD</option>
           </select>
 
-        <div class="cart-shopping-icon  position-relative">
-          <span>My Cart:</span>
-          <a href="" class="btn" id="cartIcon">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="itemCount" class="cart-count">0</span>
-          </a>
-            
-          <div id="cartCard" class="cart-card position-absolute ">
+          <div class="cart-shopping-icon position-relative">
+            <span>My Cart:</span>
+            <a href="" class="btn" id="cartIcon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="itemCount" class="cart-count">0</span>
+            </a>
 
-            <button id="closeCart"
-             style="position: absolute; top: 18px;
-               left: -60px; 
-               color:#ffffff;
-               background-color:#0098ff; 
-               width: 47px;
-               height: 47px;
-               border: 1px solid #0098ff;">&times;</button>
+            <div id="cartCard" class="cart-card position-absolute">
+              <button
+                id="closeCart"
+                style="
+                  position: absolute;
+                  top: 18px;
+                  left: -60px;
+                  color: #ffffff;
+                  background-color: #0098ff;
+                  width: 47px;
+                  height: 47px;
+                  border: 1px solid #0098ff;
+                "
+              >
+                &times;
+              </button>
 
               <div class="container">
                 <div class="row top-row">
-                    <div class="col text-left">
-                     <p>My Cart</p>
-                    </div>
-                    <div class="col text-right">
-                     <p id="miniItem">0 Items</p>
-                    </div>
+                  <div class="col text-left">
+                    <p>My Cart</p>
+                  </div>
+                  <div class="col text-right">
+                    <p id="miniItem">0 Items</p>
+                  </div>
                 </div>
 
                 <div class="row mt-4 mb-4 middle-row">
-                    <div id="cartContent" class="col">
-                      <div class="row cart-item">
-                        
-                        <div class="col-3 mini-cart-image">
-                            <img src="./src/images/1_5d4b2eec-0d47-4696-bee8-9a3d1976a2e9_600x600.png" alt="" class="img-fluid">
-                        </div>
-                    
-                        <div class="col-9">
-                            <p class="product-title">Product Name</p>
-                            
-                            <div class="d-flex align-items-center mb-4 btn-all1">
-                              <button id="decrement" class="btn mr-2">-</button>
-                              <span class="quantity1" id="quantity2">Qty: 1</span>
-                              <button id="increment" class="btn ml-2">+</button>
-                            </div>
-                          
-                            <div class="d-flex justify-content-between mini-cart-footer">
-                                <span class="product-price">$0.00</span>
-                                <i class="fa-solid fa-trash-alt delete-icon"></i>
-                            </div>
+                  <div id="cartContent" class="col">
+                    <div class="row cart-item">
+                      <div class="col-3 mini-cart-image">
+                        <img src="" alt="" class="img-fluid" />
+                      </div>
+
+                      <div class="col-9">
+                        <p class="product-title">Product Name</p>
+
+                        <div class="d-flex align-items-center mb-4 btn-all1">
+                          <button id="decrement" class="btn mr-2">-</button>
+                          <span class="quantity1" id="quantity2">Qty: 1</span>
+                          <button id="increment" class="btn ml-2">+</button>
                         </div>
 
+                        <div
+                          class="d-flex justify-content-between mini-cart-footer"
+                        >
+                          <span class="product-price">$0.00</span>
+                          <i class="fa-solid fa-trash-alt delete-icon"></i>
+                        </div>
                       </div>
                     </div>
+                  </div>
                 </div>
 
                 <div class="row bottom-row">
-                    <div class="col text-left">
-                      <p>Subtotal</p>
-                    </div>
-                    <div class="col text-right">
-                      <p>0.00 USD</p>
-                    </div>
+                  <div class="col text-left">
+                    <p>Subtotal</p>
+                  </div>
+                  <div class="col text-right">
+                    <p>0.00 USD</p>
+                  </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col text-center">
-                        <a href="">View Cart <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                  <div class="col text-center">
+                    <a href=""
+                      >View Cart <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
+            </div>
           </div>
-          
-         </div>
-          
         </div>
-      </header>
-
-      <!-- Header 2 -->
-      <header class="header-2">
-        <p>New Accessories -30 % Off. More</p>
-        <input type="text" placeholder="Search Product..." />
-        <p>New Collections</p>
       </header>
     </nav>
 
     <div class="main-content">
+      <!-- Section 1 READY -->
       <div class="main-section-1">
-        <img src="./src/images/design-circle-2.avif" alt="" class="_1">
-        <img src="./src/images/design-circle-1.webp" alt="" class="_2">
-        <img src="./src/images/main-conent-games.avif" alt="" class="_3">
-        <img src="./src/images/Half-bluthooth-left.avif" alt="" class="_4">
-        <img src="./src/images/Half-bluthooth-right.webp" alt="" class="_5">
-        <img src="./src/images/mouse-img-big.webp" alt="" class="_6">
-        <img src="./src/images/mouse-img-small.webp" alt="" class="_7">
-        <img src="./src/images/full-bluthooth.avif" alt="" class="_8">
-        <img src="./src/images/top-star.png" alt="" class="_9">
+        <img src="./src/images/design-circle-2.avif" alt="" class="_1" />
+        <img src="./src/images/design-circle-1.webp" alt="" class="_2" />
+        <img src="./src/images/main-conent-games.avif" alt="" class="_3" />
+        <img src="./src/images/Half-bluthooth-left.avif" alt="" class="_4" />
+        <img src="./src/images/Half-bluthooth-right.webp" alt="" class="_5" />
+        <img src="./src/images/mouse-img-big.webp" alt="" class="_6" />
+        <img src="./src/images/mouse-img-small.webp" alt="" class="_7" />
+        <img src="./src/images/full-bluthooth.avif" alt="" class="_8" />
+        <img src="./src/images/top-star.png" alt="" class="_9" />
         <section class="container section_1">
           <div class="row">
-            <div class="col-md-6 sect_1">
+            <div class="col-sm-12 col-lg-12 col-md-12 sect_1">
               <p>
                 <span>Featured</span> New featured collection \
                 <strong>Gaming. Collector</strong>
@@ -243,58 +242,485 @@
           </div>
         </section>
       </div>
-  
-      <!-- Section 2 -->
-      <div class="main-section-2">
-        <section class="container section_2">
-          <div class="row d-flex justify-content-between">
-            <div class="col-md-6 sect_2_left">
-              <p>Bestsellers of the week</p>
-            </div>
-            <div class="col-md-3 sect_2_right">
-              <a href="">Show products</a>
-            </div>
-          </div>
 
-          <div class="row main-row">
-            <!-- <div class="sect_2_card slide ">
-              
-            </div> -->
-          </div>
-        </section>
-      </div>
-  
-      <!-- Section 3 -->
-      <div class="main-section-3">
-        <section class="container section_3">
+      <!-- Section 2 READY -->
+      <div class="section-2-main">
+        <div class="container section-2">
           <div class="row">
-            <div class="col-md-6 sect_3_left">
-              <p>
-                Best <br />
-                <strong>Pro Gaming</strong><br />
-                Categories
-              </p>
-              <a class="d-block mb-2 a3" href="">Gaming peripherals</a>
-              <a class="d-block mb-2 a33" href="">Speakers & Headphones</a>
-              <a class="d-block a333" href="">Power Supplies</a>
+            <div
+              class="col-sm-12 col-lg-12 col-md-12 section-2-title d-flex justify-content-between"
+            >
+              <h1>Bestsellers of the week</h1>
+              <button>Show products</button>
             </div>
-            <div class="col-md-6 sect_3_right">
-              <div class="row main-row2">
-                <!-- <div class="sect_3_card">
+          </div>
+        </div>
+      </div>
 
+      <!-- Section 2 Slider READY -->
+      <section class="slider_container" id="slider_cont">
+        <div class="container">
+          <div class="swiper card_slider">
+            <div class="swiper-wrapper">
+
+              <!-- <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Nintendo Switch Lite-..</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-4-nintendo.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">Blue</option>
+                    <option value="">White</option>
+                    <option value="">Grey</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">543.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Alien ware Monitor T46</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-1-alien.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">32 Inches</option>
+                    <option value="">28 Inches</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">850.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Cloud Alpha Gaming...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-5-cloud.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">Black</option>
+                    <option value="">Red</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">530.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Clossus Ergonomic...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-2-clossus.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">White</option>
+                    <option value="">Green</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">356.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Nintendo Switch Lite-..</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-4-nintendo.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">Blue</option>
+                    <option value="">White</option>
+                    <option value="">Grey</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">543.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Alien ware Monitor T46</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-1-alien.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">32 Inches</option>
+                    <option value="">28 Inches</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">850.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Cloud Alpha Gaming...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-5-cloud.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">Black</option>
+                    <option value="">Red</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">530.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text" id="top-text-clone">
+                    <h1>Clossus Ergonomic...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-2-clossus.avif"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select
+                    name="options"
+                    class="select_main"
+                    id="select_main_clone"
+                  >
+                    <option value="">White</option>
+                    <option value="">Green</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span class="span-clone">356.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+              
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 READY -->
+      <div class="section-3-main">
+        <div class="container section-3">
+          <div class="row pt-4 pb-4">
+            <div class="col-lg-3 col-md-12 col-sm-12">
+              <h1 class="sect-3">
+                Best<br /><strong>Pro Gaming</strong><br />
+                Categories
+              </h1>
+              <div class="all-btns">
+                <a class="d-block mb-4 a3" href="">Gaming peripherals</a>
+                <a class="d-block mb-4 a33" href="">Speakers & Headphones</a>
+                <a class="d-block a333" href="">Power Supplies</a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 all-box-1">
+              <div class="row">
+
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="box">
+                    <div class="top-text">
+                      <h1>VR Headset with...</h1>
+                    </div>
+                    <div class="top-img mb-5 mt-5">
+                      <img
+                        src="./src/images/product-9-vr.avif"
+                        alt=""
+                        class="card-img-top"
+                      />
+                      <div class="icon-wrapper">
+                        <i class="fa-regular fa-heart icon1"></i>
+                        <i class="fa-regular fa-eye icon2"></i>
+                        <i class="fa-solid fa-code-compare icon3"></i>
+                      </div>
+                    </div>
+                    <select name="options" class="select_main">
+                      <option value="">18 x 11.5 x 11</option>
+                      <option value="">20 x 12.5 x 13</option>
+                    </select>
+                    <div
+                      class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                    >
+                      <span>860.00</span>
+                      <button
+                        data-product-id="${product.id}"
+                        class="add-to-cart-btn"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="box">
+                    <div class="top-text">
+                      <h1>Nintendo Switch Lite-...</h1>
+                    </div>
+                    <div class="top-img mb-5 mt-5">
+                      <img
+                        src="./src/images/product-4-nintendo.avif"
+                        alt=""
+                        class="card-img-top"
+                      />
+                      <div class="icon-wrapper">
+                        <i class="fa-regular fa-heart icon1"></i>
+                        <i class="fa-regular fa-eye icon2"></i>
+                        <i class="fa-solid fa-code-compare icon3"></i>
+                      </div>
+                    </div>
+                    <select name="options" class="select_main">
+                      <option value="">Blue</option>
+                      <option value="">White</option>
+                      <option value="">Grey</option>
+                    </select>
+                    <div
+                      class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                    >
+                      <span>543.00</span>
+                      <button
+                        data-product-id="${product.id}"
+                        class="add-to-cart-btn"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="box">
+                    <div class="top-text">
+                      <h1>Refurbished Xbox Seri..</h1>
+                    </div>
+                    <div class="top-img mb-5 mt-5">
+                      <img
+                        src="./src/images/product-7-refurbish.avif"
+                        alt=""
+                        class="card-img-top"
+                      />
+                      <div class="icon-wrapper">
+                        <i class="fa-regular fa-heart icon1"></i>
+                        <i class="fa-regular fa-eye icon2"></i>
+                        <i class="fa-solid fa-code-compare icon3"></i>
+                      </div>
+                    </div>
+                    <select name="options" class="select_main">
+                      <option value="">Black</option>
+                      <option value="">White</option>
+                    </select>
+                    <div
+                      class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                    >
+                      <span>430.00</span>
+                      <button
+                        data-product-id="${product.id}"
+                        class="add-to-cart-btn"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
                 </div> -->
-               
+
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-  
-      <!-- Section 4 -->
-      <div class="main-section-4">
-        <section class="container section_4">
-          <div class="row">
-            <div class="col-md-6 sect_4_left">
+
+      <!-- Section 4 READY -->
+      <div class="section-4-main">
+        <div class="container section-4">
+          <div class="row pt-4 pb-4">
+            <div class="col-lg-6 col-sm-12 col-md-3 section-4-left">
               <h1>
                 Subscribe newsletter<br />
                 and <strong>get -20% off</strong>
@@ -306,49 +732,51 @@
               </p>
               <input
                 type="email"
-                class="form-control"
+                class="form-control d-block"
                 placeholder="Enter email address..."
               />
             </div>
-            <div class="col-md-6 sect_4_right">
+            <div class="col-lg-6 col-sm-12 col-md-9 section-4-right">
               <img src="./src/images/subscribe-img.png" alt="Image" />
             </div>
           </div>
-        </section>
+        </div>
       </div>
-  
-      <!-- Section 5 -->
-      <div class="main-section-5">
-        <section class="container section_5">
-          <div class="row mb-4">
-            <div class="col-md-4 text-center txt5">
-              <h1>
-                Best Pro Gaming <br />
-                Products
-              </h1>
-            </div>
-            <div class="col-md-4 text-center txt55">
-              <p>
-                More powerful hardware not only betters their experiences in games
-                they're currently playing, but it also gives many players access
-                to titles<br />
-                with more demanding specifications.
-              </p>
-            </div>
-            <div class="col-md-4 text-center txt555">
-              <a href="">Show products</a>
-            </div>
+
+      <!-- Section 5 READY -->
+      <div class="section-5-main mt-5">
+        <div
+          class="container d-flex justify-content-between align-items-center section-5"
+        >
+          <div class="section-5-left">
+            <h1>Best Pro Gaming <br />Products</h1>
           </div>
+          <div class="section-5-right">
+            <button>Show products</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5-1 READY -->
+      <div class="section-5-1-main">
+        <div class="container">
           <div class="row">
-            <div class="col-md-4 sect_5_left">
-              <img src="./src/images/product-cpu.png" alt="Image" />
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="section-5-1-left">
+                <img src="./src/images/middle-left.webp" alt="" />
+              </div>
             </div>
-  
-            <div class="col-md-4 sect_5_middle">
+            <div class="col-lg-4 col-md-6 col-sm-12 middle-section">
               <div class="card">
                 <p>KD DMTR...</p>
-                <h1>Multiple connectivity options including HDMI, USB ports & RGB fans let you connect a variety of peripherals easily. Wi-Fi Ready – Connect to the internet wirelessly with ease. Preloaded with Windows 10 64-bit OS for enhanced productivity and multitasking.</h1>
-                <select name="options" class="select_5">
+                <h1>
+                  Multiple connectivity options including HDMI, USB ports & RGB
+                  fans let you connect a variety of peripherals easily. Wi-Fi
+                  Ready – Connect to the internet wirelessly with ease.
+                  Preloaded with Windows 10 64-bit OS for enhanced productivity
+                  and multitasking.
+                </h1>
+                <select name="options" class="select_5_1">
                   <option value="option1">Option 1</option>
                   <option value="option2">Option 2</option>
                 </select>
@@ -360,70 +788,73 @@
                 </div>
               </div>
             </div>
-  
-            <div class="col-md-4 sect_5_right">
-              <img src="./src/images/double.cpu.png" alt="Image" />
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="section-5-1-right">
+                <img src="./src/images/middle-right.webp" alt="" />
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-  
-      <!-- Section 6 -->
+
+      <!-- Section 6 READY-->
       <div class="main-section-6">
         <section class="container mt-5 section_6">
-          <h1>About our shop</h1>
-          <p>
-            Gaming can help to improve cognitive skills such as problem-solving,
-            memory, and attention.
-          </p>
           <div class="row">
-            <div class="col-md-3 sect_6">
-              <div class="card">
-                <h1>01</h1>
-                <p>Gift boxes</p>
-                <h2>Finished products products <br />and gift wrapping</h2>
+            <h1>About our shop</h1>
+            <p>
+              Gaming can help to improve cognitive skills such as
+              problem-solving, memory, and attention.
+            </p>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 sect_6">
+                <div class="card">
+                  <h1>01</h1>
+                  <p>Gift boxes</p>
+                  <h2>Finished products products <br />and gift wrapping</h2>
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 sect_6">
-              <div class="card">
-                <h1>02</h1>
-                <p>Promotions</p>
-                <h2>Finished products products <br />and gift wrapping</h2>
+              <div class="col-lg-3 col-md-6 col-sm-12 sect_6">
+                <div class="card">
+                  <h1>02</h1>
+                  <p>Promotions</p>
+                  <h2>Finished products products <br />and gift wrapping</h2>
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 sect_6">
-              <div class="card">
-                <h1>03</h1>
-                <p>Shipping</p>
-                <h2>Finished products products <br />and gift wrapping</h2>
+              <div class="col-lg-3 col-md-6 col-sm-12 sect_6">
+                <div class="card">
+                  <h1>03</h1>
+                  <p>Shipping</p>
+                  <h2>Finished products products <br />and gift wrapping</h2>
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 sect_6">
-              <div class="card">
-                <h1>04</h1>
-                <p>Quality</p>
-                <h2>Finished products products <br />and gift wrapping</h2>
+              <div class="col-lg-3 col-md-6 col-sm-12 sect_6">
+                <div class="card">
+                  <h1>04</h1>
+                  <p>Quality</p>
+                  <h2>Finished products products <br />and gift wrapping</h2>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-  
-      <!-- Section 7 -->
+
+      <!-- Section 7 READY-->
       <div class="main-section-7">
         <section class="container mt-5 section_7">
           <div class="row mb-4">
             <div class="col-md-4 text-center txt7">
               <h1>
-                Best <strong>Pro Gaming</strong>  <br />
+                Best <strong>Pro Gaming</strong> <br />
                 Products
               </h1>
             </div>
             <div class="col-md-4 text-center txt77">
               <p>
-                More powerful hardware not only betters their experiences in games
-                they're currently playing, but it also gives many players access
-                to titles<br />
+                More powerful hardware not only betters their experiences in
+                games they're currently playing, but it also gives many players
+                access to titles<br />
                 with more demanding specifications.
               </p>
             </div>
@@ -432,17 +863,17 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12  sect_7">
               <div class="card">
                 <div class="img-div">
-                <img src="./src/images/10.png" alt="Image" />
+                  <img src="./src/images/10.png" alt="Image" />
                 </div>
                 <h1>The Div Diary...</h1>
                 <p>AUTHOR: WORKDO</p>
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/8.png" alt="Image" />
@@ -452,7 +883,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/6.png" alt="Image" />
@@ -462,7 +893,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/4.png" alt="Image" />
@@ -472,7 +903,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/9.png" alt="Image" />
@@ -482,7 +913,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/7.png" alt="Image" />
@@ -492,7 +923,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/5.png" alt="Image" />
@@ -502,7 +933,7 @@
                 <a href="">READ MORE</a>
               </div>
             </div>
-            <div class="col-md-3 sect_7">
+            <div class="col-lg-3 col-md-6 col-sm-12 sect_7">
               <div class="card">
                 <div class="img-div">
                   <img src="./src/images/3.png" alt="Image" />
@@ -515,43 +946,320 @@
           </div>
         </section>
       </div>
-  
-      <!-- Section 8 -->
-      <div class="main-section-8">
-      <section class="container mt-5 section_8">
-        <div class="row mb-4">
-          <div class="col text-center txt8">
-            <h1>
-              Best Pro Gaming<br />
-              Products
-            </h1>
-          </div>
-          <div class="col text-center txt88">
-            <p>
-              With hardware, tools are what enable a person to install, remove, or
-              perform other actions on the components within their computer.
-            </p>
-          </div>
-          <div class="col text-center txt888"><a href="">Show products</a></div>
-        </div>
 
-        <div class="row main-row-3">
-          <!-- <div class="sect_8">
-           
-          </div> -->
+      <!-- Section 8 READY-->
+      <div class="section-8-main mt-5">
+        <div
+          class="container d-flex justify-content-between align-items-center section-8"
+        >
+          <div class="section-8-left">
+            <h1>Best Pro Gaming <br />Products</h1>
+          </div>
+          <div class="section-8-right">
+            <button>Show products</button>
+          </div>
         </div>
-
-      </section>
       </div>
 
+      <!-- Section 8 SLIDER READY -->
+      <section class="slider_container">
+        <div class="container">
+          <div class="swiper card_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Rubber Keycaps</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/rubber-keycaps.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">Green</option>
+                    <option value="">Red</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>580.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Radeon RX 120 GTS...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/radeon-120.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">3 GB</option>
+                    <option value="">8 GB</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>560.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Radeon RX 750 XT...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/radeon-740.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">Black</option>
+                    <option value="">White</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>940.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Kepler Brooks Gaming...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-kepler.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">52D x 66W x 131H</option>
+                    <option value="">50D x 65W x 130H</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>800.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Rubber Keycaps</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/rubber-keycaps.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">Green</option>
+                    <option value="">Red</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>580.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Radeon RX 120 GTS...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/radeon-120.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">3 GB</option>
+                    <option value="">8 GB</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>560.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Radeon RX 750 XT...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/radeon-740.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">Black</option>
+                    <option value="">White</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>940.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="box">
+                  <div class="top-text">
+                    <h1>Kepler Brooks Gaming...</h1>
+                  </div>
+                  <div class="top-img mb-5 mt-5">
+                    <img
+                      src="./src/images/product-kepler.webp"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="icon-wrapper">
+                      <i class="fa-regular fa-heart icon1"></i>
+                      <i class="fa-regular fa-eye icon2"></i>
+                      <i class="fa-solid fa-code-compare icon3"></i>
+                    </div>
+                  </div>
+                  <select name="options" class="select_main">
+                    <option value="">52D x 66W x 131H</option>
+                    <option value="">50D x 65W x 130H</option>
+                  </select>
+                  <div
+                    class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+                  >
+                    <span>800.00</span>
+                    <button
+                      data-product-id="${product.id}"
+                      class="add-to-cart-btn"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
     </div>
 
-
-    <div class="footer">
-      <footer>
-        <div class="footer-all">
+    <div class="footer-all">
+      <div class="container">
+        <div class="row">
           <!-- First Part -->
-          <div class="footer-section1">
+          <div class="footer-section1 col-lg-6 col-md-6 col-sm-12">
             <img src="./src/images/logo.png" alt="Description" />
             <h1>
               Reach out & let your <strong>mind</strong> <br />
@@ -566,17 +1274,17 @@
           </div>
 
           <!-- Second Part -->
-          <div class="footer-section2">
+          <div class="footer-section2 col-lg-2 col-md-6 col-sm-12">
             <h1 class="main">NAVIGATION:</h1>
             <li><a href="">Search</a></li>
             <li><a href="">All Collections</a></li>
-            <li><a href="">All Products</a></li>
+            <li><a href="/shop.html">All Products</a></li>
             <li><a href="">Article Page</a></li>
             <li><a href="">Blog Page</a></li>
           </div>
 
           <!-- Third Part -->
-          <div class="footer-section3">
+          <div class="footer-section3 col-lg-2 col-md-6 col-sm-12">
             <h1 class="main">ABOUT US:</h1>
             <li><a href="">About Us</a></li>
             <li><a href="">Contact with us</a></li>
@@ -587,7 +1295,7 @@
           </div>
 
           <!-- Fourth Part -->
-          <div class="footer-section4 icons">
+          <div class="footer-section4 icons col-lg-2 col-md-6 col-sm-12">
             <h1 class="main">SHARE:</h1>
             <i class="fa-brands fa-square-youtube"></i>
             <i class="fa-brands fa-facebook-messenger"></i>
@@ -595,12 +1303,17 @@
             <i class="fa-brands fa-square-instagram"></i>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
 
-   
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./src/js/swiper.js"></script>
   <script src="./src/js/common.js"></script>
   <script src="./src/js/index.js"></script>
-   
 </html>

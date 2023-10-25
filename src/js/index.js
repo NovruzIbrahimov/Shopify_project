@@ -1,10 +1,5 @@
 // 1. Burger menyunun acilmasi
-const burgerMenu = document.getElementById("burger-menu");
-const mainNav = document.getElementById("main-nav");
 
-burgerMenu.addEventListener("click", function () {
-  mainNav.classList.toggle("active");
-});
 
 // 2. Sag terefde acilan sebetin acilib-baglanma funksiyasi
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantityElement.textContent.split(": ")[1],
       10
     );
+    if (currentQuantity < 1)
     currentQuantity += 1;
     quantityElement.textContent = `Qty: ${currentQuantity}`;
   });
@@ -160,7 +156,7 @@ function addToCart(productId) {
   if (cartItem) {
       cartItem.count++;
   } else {
-      cart.push({ productId: productId, count: 1 });
+      cart.push({ productId: productId, count: 0 });
   }
 
   saveCart(cart);
@@ -173,30 +169,48 @@ fetch("db.json")
 
       data.products.forEach((product) => {
           html += `
-              <div class="card  col-md-3">
-                  <p>${product.title1}</p>
-                  <div class="card-image-wrapper">
-                      <img src="${product.image}" alt="Image" class="card-img-top" />
-                      <div class="icon-wrapper">
-                          <i class="fa-regular fa-heart icon1"></i>
-                          <i class="fa-regular fa-eye icon2"></i>
-                          <i class="fa-solid fa-code-compare icon3"></i>
-                      </div>
-                  </div>
-                  <select name="options" class="select_1">
-                      ${product.options
-                          .map((option) => `<option value="${option}">${option}</option>`)
-                          .join("")
-                      }
-                  </select>
-                  <div class="card-body d-flex justify-content-between align-items-center">
-                      <span>${product.price}</span>
-                      <button data-product-id="${product.id}" class="add-to-cart-btn">Add to Cart</button>
-                  </div>
-              </div>`;
+          <div class="swiper-slide">
+          <div class="box">
+            <div class="top-text" id="top-text-clone">
+              <h1>${product.title1}</h1>
+            </div>
+            <div class="top-img mb-5 mt-5">
+              <img
+                src="${product.image}"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-heart icon1"></i>
+                <i class="fa-regular fa-eye icon2"></i>
+                <i class="fa-solid fa-code-compare icon3"></i>
+              </div>
+            </div>
+            <select
+              name="options"
+              class="select_main"
+              id="select_main_clone"
+            >
+            ${product.options
+              .map((option) => `<option value="${option}">${option}</option>`)
+             .join("")}
+            </select>
+            <div
+              class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+            >
+              <span class="span-clone">${product.price}</span>
+              <button
+                data-product-id="${product.id}"
+                class="add-to-cart-btn"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>`;
       });
 
-      document.querySelector(" .main-row ").innerHTML = html;
+      document.querySelector(".swiper .swiper-wrapper").innerHTML = html;
   });
 
 document.body.addEventListener('click', function(event) {
@@ -226,7 +240,7 @@ function addToCart(productId) {
   if (cartItem) {
       cartItem.count++;
   } else {
-      cart.push({ productId: productId, count: 1 });
+      cart.push({ productId: productId, count: 0 });
   }
 
   saveCart(cart);
@@ -240,31 +254,45 @@ fetch("db.json")
       data.products2.forEach((product) => {
         html += `
           
-       <div class="card col-md-4">
-          <p>${product.title1}</p>
-          <div class="card-image-wrapper">
-            <img src="${product.image}" alt="Image" class="card-img-top" />
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box">
+          <div class="top-text">
+            <h1>${product.title1}</h1>
+          </div>
+          <div class="top-img mb-5 mt-5">
+            <img
+              src="${product.image}"
+              alt=""
+              class="card-img-top"
+            />
             <div class="icon-wrapper">
               <i class="fa-regular fa-heart icon1"></i>
               <i class="fa-regular fa-eye icon2"></i>
               <i class="fa-solid fa-code-compare icon3"></i>
             </div>
           </div>
-          <select name="options" class="select_3">
-            ${product.options
-              .map((option) => `<option value="${option}">${option}</option>`)
-              .join("")}
+          <select name="options" class="select_main">
+          ${product.options
+                           .map((option) => `<option value="${option}">${option}</option>`)
+                          .join("")}
           </select>
-          <div class="card-body d-flex justify-content-between align-items-center">
+          <div
+            class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
+          >
             <span>${product.price}</span>
-            <button data-product-id="${product.id}" class="add-to-cart-btn">Add to Cart</button>
+            <button
+              data-product-id="${product.id}"
+              class="add-to-cart-btn"
+            >
+              Add to Cart
+            </button>
           </div>
-       </div>
-         
+        </div>
+      </div>
           `;
       });
 
-      document.querySelector(".main-row2 ").innerHTML = html;
+      document.querySelector(".all-box-1 .row ").innerHTML = html;
   });
 
 document.body.addEventListener('click', function(event) {
@@ -279,70 +307,70 @@ document.body.addEventListener('click', function(event) {
   
 // 10. Section8-de Dinamik cart yaratmaqcun funksiya ve add to etmek
 
-function getCart() {
-  const cart = localStorage.getItem('cart');
-  return cart ? JSON.parse(cart) : [];
-}
+// function getCart() {
+//   const cart = localStorage.getItem('cart');
+//   return cart ? JSON.parse(cart) : [];
+// }
 
-function saveCart(cart) {
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
+// function saveCart(cart) {
+//   localStorage.setItem('cart', JSON.stringify(cart));
+// }
 
-function addToCart(productId) {
-  const cart = getCart();
-  const cartItem = cart.find(item => item.productId === productId);
+// function addToCart(productId) {
+//   const cart = getCart();
+//   const cartItem = cart.find(item => item.productId === productId);
+//   console.log(1)
+//   if (cartItem) {
+//       cartItem.count++;
+//   } else {
+//       cart.push({ productId: productId, count: 1 });
+//   }
 
-  if (cartItem) {
-      cartItem.count++;
-  } else {
-      cart.push({ productId: productId, count: 1 });
-  }
+//   saveCart(cart);
+// }
 
-  saveCart(cart);
-}
+// fetch("db.json")
+//   .then((res) => res.json())
+//   .then((data) => {
+//       let html = "";
 
-fetch("db.json")
-  .then((res) => res.json())
-  .then((data) => {
-      let html = "";
-
-      data.products1.forEach((product) => {
-        html += `
+//       data.products1.forEach((product) => {
+//         html += `
           
-       <div class="card col-md-3">
-          <p>${product.title1}</p>
-          <div class="card-image-wrapper">
-            <img src="${product.image}" alt="Image" class="card-img-top" />
-            <div class="icon-wrapper">
-              <i class="fa-regular fa-heart icon1"></i>
-              <i class="fa-regular fa-eye icon2"></i>
-              <i class="fa-solid fa-code-compare icon3"></i>
-            </div>
-          </div>
-          <select name="options" class="select_8">
-            ${product.options
-              .map((option) => `<option value="${option}">${option}</option>`)
-              .join("")}
-          </select>
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <span>${product.price}</span>
-            <button data-product-id="${product.id}" class="add-to-cart-btn">Add to Cart</button>
-          </div>
-       </div>
+//        <div class="card col-md-3">
+//           <p>${product.title1}</p>
+//           <div class="card-image-wrapper">
+//             <img src="${product.image}" alt="Image" class="card-img-top" />
+//             <div class="icon-wrapper">
+//               <i class="fa-regular fa-heart icon1"></i>
+//               <i class="fa-regular fa-eye icon2"></i>
+//               <i class="fa-solid fa-code-compare icon3"></i>
+//             </div>
+//           </div>
+//           <select name="options" class="select_8">
+//             ${product.options
+//               .map((option) => `<option value="${option}">${option}</option>`)
+//               .join("")}
+//           </select>
+//           <div class="card-body d-flex justify-content-between align-items-center">
+//             <span>${product.price}</span>
+//             <button data-product-id="${product.id}" class="add-to-cart-btn">Add to Cart</button>
+//           </div>
+//        </div>
          
           
-          `;
-      });
+//           `;
+//       });
 
-      document.querySelector(".main-row-3").innerHTML = html;
-  });
+//       document.querySelector(".row.main-row-3").innerHTML = html;
+//   });
 
-document.body.addEventListener('click', function(event) {
-  if (event.target.classList.contains('add-to-cart-btn')) {
-      const productId = parseInt(event.target.getAttribute('data-product-id'));
-      addToCart(productId);
-      window.location.href = "cart.html"; 
-  }
-});
+// document.body.addEventListener('click', function(event) {
+//   if (event.target.classList.contains('add-to-cart-btn')) {
+//       const productId = parseInt(event.target.getAttribute('data-product-id'));
+//       addToCart(productId);
+//       window.location.href = "cart.html"; 
+//   }
+// });
 
 

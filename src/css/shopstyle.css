@@ -1,0 +1,267 @@
+/* Top-container hissenin baslangici */
+.section-shop {
+    background-color: #000000;
+    padding-top: 60px;
+  }
+  .small-text-group {
+    padding: 70px 0 70px 0;
+  }
+  .small-text-group a {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+  }
+  .small-text-group a i.fa-solid {
+    padding: 4px 0;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #000000;
+    margin-right: 10px;
+  }
+  .small-text-group h1 {
+    font-size: 41px;
+    font-weight: bold;
+    color: #007aff;
+    margin-top: 20px;
+  }
+  /* Top-container hissenin sonu */
+  
+  /* Second-container hissenin baslangici */
+  .top-text h1 {
+    font-size: 22px;
+    color: #000000;
+  }
+  .top-text button.main-btn {
+    font-size: 13px;
+    font-weight: bold;
+    color: #7b35c8;
+    padding: 11px 20px;
+    border: 1px solid #7b35c8;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition: all 0.5s;
+  }
+  .top-text button.main-btn:hover {
+    color: #ffffff;
+    background-color: grey;
+    border: 1px solid grey;
+  }
+  .accordion-item h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+  }
+  .top-accordion-text h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+  }
+  .top-accordion-text span.small-span {
+    font-size: 12px;
+    font-weight: bolder;
+    color: #000000;
+  }
+  .top-accordion-text a.bt-btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #000000;
+  }
+  .bottom-accordion-text ul.accordion-ul {
+    list-style-type: none;
+    padding: 0 0 0 0;
+  }
+  .accordion-ul li span {
+    float: right;
+  }
+  .price-left input {
+    width: 95%;
+    height: 38px;
+    padding: 0 0 0 10px;
+    margin-right: 9px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .price-right input {
+    width: 95%;
+    height: 38px;
+    padding: 0 0 0 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 18 4z'/%3E%3C/svg%3E");
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+  }
+  .color-input1, .color-input2, .color-input3, .color-input4, .color-input5, .color-input6 {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    position: relative;
+  }
+  .color-input1 {
+    background-color: black;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .color-input2 {
+    background-color: blue;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .color-input3 {
+    background-color: green;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .color-input4 {
+    background-color: grey;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .color-input5 {
+    background-color: red;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+  .color-input6 {
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 3px;  /* Adding a border since white will blend with most backgrounds */
+  }
+  .color-input1:checked::before,
+  .color-input2:checked::before,
+  .color-input3:checked::before,
+  .color-input4:checked::before,
+  .color-input5:checked::before,
+  .color-input6:checked::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 11px;
+    font-weight: 900; 
+    content: "\f00c";
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  /* Second-container hissenin sonu */
+  
+  /* Sag terefdeki cartlarin baslangici */
+  .box {
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(1, 91, 255, 0.18);
+  }
+  .box:hover .card-img-top:after {
+    content: "\f004 \f06e \e13a";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .icon-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .box:hover .top-img .icon-wrapper {
+    display: block;
+  }
+  .icon-wrapper {
+    background: linear-gradient(72deg, #0098ff 0%, #7b35c8 100%);
+    border: 1px solid #007aff;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    padding: 2px 13px 2px 13px;
+  }
+  .icon1,
+  .icon2,
+  .icon3 {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .icon-wrapper i.icon2 {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .top-text {
+    margin: 10px 0 0 10px;
+  }
+  .top-text h1{
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000;
+  }
+  .top-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .select_main {
+    margin: 0 0 0 10px;
+    width: 92%;
+    height: 36px;
+    outline: none;
+    background-color: aliceblue;
+  }
+  .bottom-text {
+    margin: 0 10px 0 10px;
+  }
+  .bottom-text span {
+    font-size: 20px;
+    color: #000000;
+  }
+  .bottom-text button {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 4px 30px;
+    background-color: #007aff;
+    border: 1px solid #007aff;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: all 0.5s;
+  }
+  .bottom-text button:hover {
+    color: #838383;
+    background-color: #ffffff;
+    border: 1px solid #838383;
+  }
+  .top-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .col-md-6 {
+    padding: 10px;
+  }
+  
+  .col-md-4 {
+    padding: 10px 30px 10px 30px;
+  }
