@@ -122,7 +122,9 @@
       "price": "850.00",
       "image": "src/images/product-1-alien.avif",
       "options": ["32 Inches", "28 Inches"],
-      "images": ["src/images/product-Alien-46-small-1.webp", "src/images/product-Alien-46-small-2.webp"]
+      "photo1": ["src/images/product-Alien-46-small-1.webp"],
+      "photo2": ["src/images/product-Alien-46-small-2.webp"]
+      
     },
     {
       "id": 2,
@@ -131,7 +133,9 @@
       "price": "356.00",
       "image": "src/images/product-2-clossus.avif",
       "options": ["White", "Green"],
-      "images": ["src/images/product-Colossus-small-1.webp","src/images/product-Colossus-small-2.webp"]
+      "photo1": ["src/images/product-Colossus-small-1.webp"],
+      "photo2": ["src/images/product-Colossus-small-2.webp"]
+      
     },
     {
       "id": 3,
@@ -147,7 +151,8 @@
       "price": "543.00",
       "image": "src/images/product-4-nintendo.avif",
       "options": ["Blue", "White"],
-      "images": ["src/images/product-Nintendo-small-1.webp","src/images/product-Nintendo-small-2.webp"]
+      "photo1": ["src/images/product-Nintendo-small-1.webp"],
+      "photo2": ["src/images/product-Nintendo-small-2.webp"]
     },
     {
       "id": 5,
@@ -156,7 +161,8 @@
       "price": "800.00",
       "image": "src/images/product-kepler.webp",
       "options": ["52D x 66W x131H", "50D x 65W x 130H"],
-      "images": ["src/images/product-kepler-small-1.webp","src/images/product-kepler-small-2.webp"]
+      "photo1": ["src/images/product-kepler-small-1.webp"],
+      "photo2": ["src/images/product-kepler-small-2.webp"]
     },
     {
       "id": 6,
@@ -165,7 +171,8 @@
       "price": "940.00",
       "image": "src/images/radeon-740.webp",
       "options": ["Black", "White"],
-      "images": ["src/images/product-radeon750-small-1.webp","src/images/product-radeon750-small-2.webp"]
+      "photo1": ["src/images/product-radeon750-small-1.webp"],
+      "photo2": ["src/images/product-radeon750-small-2.webp"]
     },
     {
       "id": 7,
@@ -174,7 +181,8 @@
       "price": "430.00",
       "image": "src/images/product-7-refurbish.avif",
       "options": ["Black", "White"],
-      "images": ["src/images/product-refurbish-small-1.webp","src/images/product-refurbish-small-2.webp"]
+      "photo1": ["src/images/product-refurbish-small-1.webp"],
+      "photo2": ["src/images/product-refurbish-small-2.webp"]
     },
     {
       "id": 8,
@@ -190,7 +198,8 @@
       "price": "860.00",
       "image": "src/images/product-9-vr.avif",
       "options": ["18 x 11.5 x 11", "20 x 12.5 x 13"],
-      "images": ["src/images/product-Vr-small-1.webp","src/images/product-Vr-small-2.webp"]
+      "photo1": ["src/images/product-Vr-small-1.webp"],
+      "photo2": ["src/images/product-Vr-small-2.webp"]
     },
     {
       "id": 10,
@@ -199,7 +208,8 @@
       "price": "560.00",
       "image": "src/images/radeon-120.webp",
       "options": ["3 Gb", "8 GB"],
-      "images": ["src/images/product-radeon120-small-1.webp","src/images/product-radeon120-small-2.webp"]
+      "photo1": ["src/images/product-radeon120-small-1.webp"],
+      "photo2": ["src/images/product-radeon120-small-2.webp"]
     },
     {
       "id": 11,
@@ -208,7 +218,8 @@
       "price": "580.00",
       "image": "src/images/rubber-keycaps.webp",
       "options": ["Green", "Red"],
-      "images": ["src/images/product-rubber-small-1.webp","src/images/product-rubber-small-2.avif"]
+      "photo1": ["src/images/product-rubber-small-1.webp"],
+      "photo2": ["src/images/product-rubber-small-2.avif"]
     },
     {
       "id": 12,
@@ -245,7 +256,8 @@
       "price": "530.00",
       "image": "src/images/product-5-cloud.avif",
       "options": ["Black", "Red"],
-      "images": ["src/images/product-cloud-small-1.webp","src/images/product-cloud-small-2.webp"]
+      "photo1": ["src/images/product-cloud-small-1.webp"],
+      "photo2": ["src/images/product-cloud-small-2.webp"]
     }
 
     

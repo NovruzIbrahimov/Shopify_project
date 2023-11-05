@@ -1,7 +1,4 @@
-// 1. Burger menyunun acilmasi
-
-
-// 2. Sag terefde acilan sebetin acilib-baglanma funksiyasi
+// 2. Sag terefde acilan sebetin acilib-baglanma funksiyasi START----------------------------
 document.addEventListener("DOMContentLoaded", function () {
   var cartIcon = document.getElementById("cartIcon");
   var cartCard = document.getElementById("cartCard");
@@ -35,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// 2. Sag terefde acilan sebetin acilib-baglanma funksiyasi END----------------------------
 
-// 3. Sehifeni asagi eledikce headerin ustde qalmasi
-
+// 3. Sehifeni asagi eledikce headerin ustde qalmasi START---------------------------------
 document.addEventListener("scroll", function () {
   const header1 = document.querySelector(".header-1");
   const header2 = document.querySelector(".header-2");
@@ -50,8 +47,9 @@ document.addEventListener("scroll", function () {
     header2.style.transform = "translateY(0)"; // Show header-2
   }
 });
+// 3. Sehifeni asagi eledikce headerin ustde qalmasi END---------------------------------
 
-// 4. Quantity artirib ve azaltma funksiyasi
+// 4. Quantity artirib ve azaltma funksiyasi START----------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const decrementButton = document.getElementById("decrement");
   const incrementButton = document.getElementById("increment");
@@ -78,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
     quantityElement.textContent = `Qty: ${currentQuantity}`;
   });
 });
+// 4. Quantity artirib ve azaltma funksiyasi END----------------------------------------
 
-// 5. Say artirib azaldanda shopping cart iconun ustundeki icona dusme funksiyasi
-
+// 5. Say artirib azaldanda shopping cart iconun ustundeki icona dusme funksiyasi START-------------------
 document.addEventListener("DOMContentLoaded", function () {
   let itemCount = parseInt(document.getElementById("itemCount").innerText);
 
@@ -101,9 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("itemCount").innerText = itemCount;
   }
 });
+// 5. Say artirib azaldanda shopping cart iconun ustundeki icona dusme funksiyasi END-------------------
 
-// 6.  Sag terefde acilan sebetdeki item sozunde reqem emele getirib silen funksiya
-
+// 6.  Sag terefde acilan sebetdeki item sozunde reqem emele getirib silen funksiya START-----------------
 document.addEventListener("DOMContentLoaded", function () {
   let miniItem = parseInt(document.getElementById("miniItem").innerText);
 
@@ -124,22 +122,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("miniItem").innerText = miniItem;
   }
 });
+// 6.  Sag terefde acilan sebetdeki item sozunde reqem emele getirib silen funksiya END-----------------
 
-// 7. Sag terefde acilan sebetde mini-cart silmek funksiyasi
 
-document.addEventListener("DOMContentLoaded", function () {
+// 7. Sag terefde acilan sebetde mini-cart silmek funksiyasi START--------------------------
+document.addEventListener("DOMContentLoaded", () => {
   const cartContent = document.getElementById("cartContent");
+  const itemCountElement = document.getElementById("itemCount");
+  const miniItemCountElement = document.getElementById("miniItem");
 
-  cartContent.addEventListener("click", function (e) {
-    if (e.target.classList.contains("delete-icon")) {
-      e.target.closest(".cart-item").remove();
-    }
+  cartContent.addEventListener("click", e => {
+      if (e.target.classList.contains("delete-icon")) {
+          e.target.closest(".cart-item").remove();
+          updateItemCount();
+      }
   });
+
+  function updateItemCount() {
+      const itemCount = document.querySelectorAll(".cart-item").length;
+      itemCountElement.innerText = itemCount;
+      miniItemCountElement.innerText = itemCount === 0 ? 'No Items' : `${itemCount} Items`;
+  }
 });
+// 7. Sag terefde acilan sebetde mini-cart silmek funksiyasi END--------------------------
 
 
-// 8. Section2 de add to elemek
-
+// 8. Section2 de add to elemek START------------------------------------
 function getCart() {
   const cart = localStorage.getItem('cart');
   return cart ? JSON.parse(cart) : [];
@@ -152,15 +160,12 @@ function saveCart(cart) {
 function addToCart(productId) {
   const cart = getCart();
   const cartItem = cart.find(item => item.productId === productId);
-
-  if (cartItem) {
-      cartItem.count++;
-  } else {
-      cart.push({ productId: productId, count: 0 });
-  }
-
-  saveCart(cart);
+  console.log('cartItem=>',cartItem)
 }
+
+
+
+
 
 fetch("db.json")
   .then((res) => res.json())
@@ -182,7 +187,7 @@ fetch("db.json")
               />
               <div class="icon-wrapper">
                 <i class="fa-regular fa-heart icon1"></i>
-                <i class="fa-regular fa-eye icon2"></i>
+                <i class="fa-regular fa-eye icon2 view-detail-pro" data-product-id="${product.id}" ></i>
                 <i class="fa-solid fa-code-compare icon3"></i>
               </div>
             </div>
@@ -192,7 +197,7 @@ fetch("db.json")
               id="select_main_clone"
             >
             ${product.options
-              .map((option) => `<option value="${option}">${option}</option>`)
+             .map((option) => `<option value="${option}">${option}</option>`)
              .join("")}
             </select>
             <div
@@ -212,18 +217,16 @@ fetch("db.json")
 
       document.querySelector(".swiper .swiper-wrapper").innerHTML = html;
   });
+function openProductDEtail(productId){
+  const cart = getCart();
+  const product = cart.find(item => item.productId === productId);
+  console.log('product',product)
+  product && localStorage.setItem('product-detail', JSON.stringify(product));
+}
+// 8. Section2 de add to elemek END------------------------------------
 
-document.body.addEventListener('click', function(event) {
-  if (event.target.classList.contains('add-to-cart-btn')) {
-      const productId = parseInt(event.target.getAttribute('data-product-id'));
-      addToCart(productId);
-      window.location.href = "cart.html"; 
-  }
-});
 
-
-// 9. Section3 de add to etmek
-
+// 9. Section3 de add to etmek START--------------------------------------
 function getCart() {
   const cart = localStorage.getItem('cart');
   return cart ? JSON.parse(cart) : [];
@@ -240,7 +243,7 @@ function addToCart(productId) {
   if (cartItem) {
       cartItem.count++;
   } else {
-      cart.push({ productId: productId, count: 0 });
+      cart.push({ productId: productId, count: 1 });
   }
 
   saveCart(cart);
@@ -250,10 +253,9 @@ fetch("db.json")
   .then((res) => res.json())
   .then((data) => {
       let html = "";
-
-      data.products2.forEach((product) => {
+      const newData = data.productAlls.splice(1,3)
+      newData.forEach((product) => {
         html += `
-          
         <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="box">
           <div class="top-text">
@@ -267,14 +269,14 @@ fetch("db.json")
             />
             <div class="icon-wrapper">
               <i class="fa-regular fa-heart icon1"></i>
-              <i class="fa-regular fa-eye icon2"></i>
+              <i class="fa-regular fa-eye icon2 view-detail-pro" data-product-id="${product.id}"></i>
               <i class="fa-solid fa-code-compare icon3"></i>
             </div>
           </div>
           <select name="options" class="select_main">
           ${product.options
-                           .map((option) => `<option value="${option}">${option}</option>`)
-                          .join("")}
+            .map((option) => `<option value="${option}">${option}</option>`)
+            .join("")}
           </select>
           <div
             class="bottom-text d-flex justify-content-between align-items-center mt-4 mb-3"
@@ -289,22 +291,39 @@ fetch("db.json")
           </div>
         </div>
       </div>
+      
           `;
       });
 
       document.querySelector(".all-box-1 .row ").innerHTML = html;
   });
 
+  
 document.body.addEventListener('click', function(event) {
   if (event.target.classList.contains('add-to-cart-btn')) {
       const productId = parseInt(event.target.getAttribute('data-product-id'));
       addToCart(productId);
       window.location.href = "cart.html"; 
   }
+  if (event.target.classList.contains('view-detail-pro')) {
+    const productId = parseInt(event.target.getAttribute('data-product-id'));
+    window.location.href = `productdetail.html?productId=${productId}`; 
+  }
 });
+// 9. Section3 de add to etmek END--------------------------------------
  
 
   
+
+
+
+
+
+
+
+
+
+
 // 10. Section8-de Dinamik cart yaratmaqcun funksiya ve add to etmek
 
 // function getCart() {

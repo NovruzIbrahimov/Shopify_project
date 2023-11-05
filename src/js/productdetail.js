@@ -1,99 +1,104 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    const decrementButton = document.getElementById('decrement');
-    const incrementButton = document.getElementById('increment');
-    const quantityElement = document.getElementById('quantity');
-  
-    decrementButton.addEventListener('click', function() {
-      let currentQuantity = parseInt(quantityElement.textContent.split(": ")[1], 10);
-      if (currentQuantity > 1) {
-        currentQuantity -= 1;
-        quantityElement.textContent = `Qty: ${currentQuantity}`;
-      }
-    });
-  
-    incrementButton.addEventListener('click', function() {
-      let currentQuantity = parseInt(quantityElement.textContent.split(": ")[1], 10);
-      currentQuantity += 1;
+document.addEventListener("DOMContentLoaded", function () {
+  const decrementButton = document.getElementById("decrement");
+  const incrementButton = document.getElementById("increment");
+  const quantityElement = document.getElementById("quantity");
+
+  decrementButton.addEventListener("click", function () {
+    let currentQuantity = parseInt(
+      quantityElement.textContent.split(": ")[1],
+      10
+    );
+    if (currentQuantity > 1) {
+      currentQuantity -= 1;
       quantityElement.textContent = `Qty: ${currentQuantity}`;
+    }
+  });
+
+  incrementButton.addEventListener("click", function () {
+    let currentQuantity = parseInt(
+      quantityElement.textContent.split(": ")[1],
+      10
+    );
+    currentQuantity += 1;
+    quantityElement.textContent = `Qty: ${currentQuantity}`;
+  });
+
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("productId");
+
+  fetch("db.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const product = data.productAlls.find(
+        (p) => p.id === parseInt(productId)
+      );
+
+      if (product) {
+        const html = `
+        <div class="col-md-6 left-main">
+        <div class="mb-3 sp-all">
+          <span class="mr-2 sp1">Span 1</span>
+            <i class="fa-regular fa-heart"></i>
+           <span>Add to wishlist</span>
+            </div>
+            <div class="mb-3 icons-all">
+            <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              </div>
+            <h1 class="mb-3 product-title">${product.title1}</h1>
+            <p class="mb-3 product-description">
+              ${product.description}
+           </p>
+            <div class="mb-3 color-all">
+              <p>Color:</p>
+              <select class="color-select">
+               <option value="">Black</option>
+                <option value="">Red</option>
+              </select>
+            </div>
+            <div class="d-flex mb-3 price-main">
+                <span class="price">${product.price}</span>
+              <div class="d-flex align-items-center btn-all">
+                  <button id="decrement" class="btn mr-2">-</button>
+                  <span class="quantity" id="quantity">Qty: 1</span>
+                  <button id="increment" class="btn ml-2">+</button>
+              </div>
+              </div>
+              <div class="second-btns">
+                <button class="btn mr-2">Add to Cart</button>
+                <button class="btn">Buy it now</button>
+              </div>
+            </div>
+
+            <div class="col-md-6 right-main">
+              <div class="d-flex align-items-start">
+                <div class="slider-thumbnails mr-3">
+                  <div class="mb-2 thumbnail" data-img="">
+                   <img src="${product.photo1}" alt="" />
+                  </div>
+                  <div class="mb-2 thumbnail" data-img="">
+                    <img src="${product.photo2}" alt="" />
+                  </div>
+                </div>
+                <div class="product-image-box" id="colorBox">
+                  <img id="mainImage" src="${product.image}" alt="" />
+                </div>
+              </div>
+            </div>
+        `;
+
+        document.querySelector("#pro-detail").innerHTML = html;
+      } else {
+        const errorHtml = `<p>Product not found</p>`;
+        document.querySelector("#pro-detail").innerHTML = errorHtml;
+      }
     });
-    
-  });
-
-
-  // === productTemplate function ===
-// Function to populate the product template
-function populateProductDetails(product) {
-  // Update product title
-  document.querySelector('.left-main h1').textContent = product.title;
-  // Update product description
-  document.querySelector('.left-main p').textContent = product.description;
-  // Update product price
-  document.querySelector('.price').textContent = `$${product.price.toFixed(2)}`;
-
-  // Populate colors dropdown
-  const colorSelect = document.querySelector('.color-select');
-  product.colors.forEach(color => {
-      const option = document.createElement('option');
-      option.textContent = color;
-      colorSelect.appendChild(option);
-  });
-
-  // Set rating stars
-  const rating = Math.round(product.rating); // assuming rating is out of 5
-  const stars = document.querySelectorAll('.icons-all i');
-  stars.forEach((star, index) => {
-      if (index < rating) {
-          star.classList.add('fa-solid');
-          star.classList.remove('fa-regular');
-      }
-  });
-
-  // Handle wishlist state
-  if (product.wishlist) {
-      const heartIcon = document.querySelector('.sp-all .fa-heart');
-      heartIcon.classList.add('fa-solid');
-      heartIcon.classList.remove('fa-regular');
-  }
-
-  // Populate product images and set the main image
-  const thumbnails = document.querySelectorAll('.thumbnail');
-  thumbnails.forEach((thumbnail, index) => {
-      if (product.images[index]) {
-          thumbnail.setAttribute('data-img', product.images[index]);
-          thumbnail.querySelector('img').src = product.images[index];
-      }
-  });
-  document.getElementById('mainImage').src = product.images[0] || '';
-
-  // Event listener for thumbnail click
-  document.addEventListener('click', function(e) {
-      if (e.target && e.target.parentElement.classList.contains('thumbnail')) {
-          const newImage = e.target.parentElement.getAttribute('data-img');
-          document.getElementById('mainImage').src = newImage;
-      }
-  });
-}
-
-// Fetch the product details and populate the page
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
-
-if (productId) {
-  fetch(`http://localhost:3000/products/${productId}`)
-      .then(response => response.json())
-      .then(product => {
-          populateProductDetails(product);
-      })
-      .catch(error => console.error('Error fetching product:', error));
-}
-
-
-
-
- 
-
-  
-
-
-
+});

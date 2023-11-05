@@ -28,8 +28,6 @@ function getCart() {
     const cart = localStorage.getItem('cart');
     return cart ? JSON.parse(cart) : [];
 }
-
-
 function saveCart(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
@@ -67,7 +65,7 @@ async function fetchAndDisplayCartItems() {
             <div class="count-controller">
                 <button class="decrease-btn" data-product-id="${item.id}">-</button>
                 <span class="item-count">${item.count}</span>
-                <button class "increase-btn" data-product-id="${item.id}">+</button>
+                <button class="increase-btn" data-product-id="${item.id}">+</button>
             </div>`;
         basketProductsDiv.appendChild(productDiv);
 
@@ -75,8 +73,43 @@ async function fetchAndDisplayCartItems() {
         totalPrice += parseFloat(item.price) * item.count;
     });
 
+// sidecart start -------------------------------------------------
+
+    const sideBasketProductsDiv = document.querySelector('#cartContent');
+    sideBasketProductsDiv.innerHTML = ''; 
+
+    cartItems.forEach(item => {
+        const  sideBasketproductDiv = document.createElement('div');
+        sideBasketproductDiv.classList.add('row');
+        sideBasketproductDiv.classList.add('cart-item');
+        sideBasketproductDiv.innerHTML = `
+        <div class="col-3 mini-cart-image">
+        <img src="${item.image}" alt="${item.title1}" class="img-fluid">
+        </div>
+
+        <div class="col-9">
+        <p class="product-title">${item.title1}</p>
+        <div class="d-flex align-items-center mb-4 btn-all1">
+          <button id="decrement" class="btn mr-2 decrease-btn" data-product-id="${item.id}">-</button>
+          <span class="quantity1" id="quantity2">${item.count}</span>
+          <button id="increment" class="btn ml-2 increase-btn" data-product-id="${item.id}">+</button>
+        </div>
+      
+        <div class="d-flex justify-content-between mini-cart-footer">
+            <span class="product-price">${item.price}</span>
+            <i class="fa-solid fa-trash-alt delete-btn-sidebar" data-product-id="${item.id}"></i>
+        </div>
+        </div>
+            `;
+        sideBasketProductsDiv.appendChild(sideBasketproductDiv);
+    });
+// sidecart end -------------------------------------------------------
+
+
     document.querySelector('#totalbasketcount').textContent = totalItems;
     document.querySelector('#totalbasketprice').textContent = totalPrice.toFixed(2);
+    document.querySelector('#itemCount').textContent = totalItems;
+    document.querySelector('#sub-total-side-bar').textContent = totalPrice.toFixed(2);
 }
 
 
@@ -88,6 +121,13 @@ function increaseItemCount(productId) {
         saveCart(cart);
         fetchAndDisplayCartItems();
     }
+}
+
+function deleteItem(productId) {
+    const cart = getCart();
+    const updatedCart = cart.filter(item => item.productId !== productId);
+    saveCart(updatedCart);
+    fetchAndDisplayCartItems();
 }
 
 function decreaseItemCount(productId) {
@@ -116,5 +156,22 @@ document.body.addEventListener('click', function(event) {
         const productId = parseInt(event.target.getAttribute('data-product-id'));
         decreaseItemCount(productId);
     }
+    if (event.target.classList.contains('delete-btn-sidebar')) {
+        const productId = parseInt(event.target.getAttribute('data-product-id'));
+        deleteItem(productId);
+    }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
